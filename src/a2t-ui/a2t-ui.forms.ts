@@ -24,8 +24,8 @@ export class BaseField{
 
 export const SIGN_IN_FORM: BaseField[] = [
     new BaseField({
-        key: 'email',
-        label: 'Email',
+        key: 'Login',
+        label: 'Login',
         type: 'text',
         validators: [
             Validators.required,
@@ -45,8 +45,8 @@ export const SIGN_IN_FORM: BaseField[] = [
 
 export const SIGN_UP_FORM: BaseField[] = [
     new BaseField({
-        key: 'email',
-        label: 'Email',
+        key: 'login',
+        label: 'Login',
         type: 'text',
         validators: [
             Validators.required,
@@ -75,8 +75,8 @@ export const SIGN_UP_FORM: BaseField[] = [
 
 export const RESET_PASSWORD_FORM: BaseField[] = [
     new BaseField({
-        key: 'email',
-        label: 'Email',
+        key: 'login',
+        label: 'Login',
         type: 'text',
         validators: [
             Validators.required,

@@ -1,13 +1,13 @@
 // Function Data
 
 export interface SignInData {
-    email:                  string;
+    login:                  string;
     password:               string;
     userType?:              string;
 }
 
 export interface RegisterData {
-    email:                  string;
+    login:                  string;
     password:               string;
     passwordConfirmation:   string;
     name?:                  string;
@@ -27,7 +27,7 @@ export interface UpdatePasswordData {
 }
 
 export interface ResetPasswordData {
-    email:                  string;
+    login:                  string;
     userType?:              string;
 }
 
@@ -48,7 +48,7 @@ export interface UserData {
     name:           string;
     nickname:       string;
     image:          any;
-    email:          string;
+    login:          string;
 }
 
 // Configuration Options

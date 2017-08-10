@@ -1,5 +1,5 @@
 {
-  "name": "angular2-token",
+  "name": "@dlani-web/angular2-token",
   "version": "0.2.0-beta.12",
   "description": "Angular2 service for token based authentication",
   "main": "./angular2-token.js",
@@ -7,7 +7,8 @@
   "scripts": {
     "test": "karma start",
     "build": "rimraf lib && ngc -p src",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
     "angular2",
@@ -63,14 +64,18 @@
     "webpack": "3.4.1",
     "zone.js": "0.8.16"
   },
-  "author": "Jan-Philipp Riethmacher <neroniaky@gmail.com>",
+  "author": "Dlani Web",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neroniaky/angular2-token.git"
+    "url": "git+https://github.com/dlanileonardo/angular2-token.git"
   },
   "bugs": {
-    "url": "https://github.com/neroniaky/angular2-token/issues"
+    "url": "https://github.com/dlanileonardo/angular2-token/issues"
   },
-  "homepage": "https://github.com/neroniaky/angular2-token#readme"
+  "homepage": "https://github.com/dlanileonardo/angular2-token#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {}
 }

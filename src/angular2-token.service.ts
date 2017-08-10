@@ -182,7 +182,7 @@ export class Angular2TokenService implements CanActivate {
             this.atCurrentUserType = this.getUserTypeByName(signInData.userType);
 
         let body = JSON.stringify({
-            email:      signInData.email,
+            login:      signInData.login,
             password:   signInData.password
         });
 
@@ -297,7 +297,7 @@ export class Angular2TokenService implements CanActivate {
             this.atCurrentUserType = this.getUserTypeByName(resetPasswordData.userType);
 
         let body = JSON.stringify({
-            email:          resetPasswordData.email,
+            login:          resetPasswordData.login,
             redirect_url:   this.atOptions.resetPasswordCallback
         });
 
@@ -370,7 +370,7 @@ export class Angular2TokenService implements CanActivate {
 
         // Get auth data from local storage
         this.getAuthDataFromStorage();
-        
+
         // Merge auth headers to request if set
         if (this.atCurrentAuthData != null) {
             (<any>Object).assign(baseHeaders, {

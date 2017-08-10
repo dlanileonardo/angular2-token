@@ -33,12 +33,12 @@ describe('Angular2TokenService', () => {
 	});
 
 	let signInData: SignInData = {
-		email: 'test@test.de',
+		login: 'test@test.de',
 		password: 'password'
 	}
 
 	let registerData: RegisterData = {
-		email: 'test@test.de',
+		login: 'test@test.de',
 		password: 'password',
 		passwordConfirmation: 'password'
 	}
@@ -115,7 +115,7 @@ describe('Angular2TokenService', () => {
 		mockBackend.connections.subscribe(
 			c => {
 				expect(c.request.getBody()).toEqual(JSON.stringify({
-					email: 					'test@test.de',
+					login: 					'test@test.de',
 					password:				'password',
 					password_confirmation:	'password',
 					confirm_success_url: 	window.location.href
@@ -138,7 +138,7 @@ describe('Angular2TokenService', () => {
 		);
 
 		tokenService.init({ apiPath: 'myapi', signInPath: 'myauth/mysignin' });
-		tokenService.signIn(signInData.email, signInData.password);
+		tokenService.signIn(signInData.login, signInData.password);
 	}));
 
 	it('signOut should send to configured path', inject([Angular2TokenService, MockBackend], (tokenService, mockBackend) => {
@@ -233,13 +233,13 @@ describe('Angular2TokenService', () => {
 			c => c.mockRespond(new Response(
 				new ResponseOptions({
 					headers: tokenHeaders,
-					body: { email: 'test@email.com' }
+					body: { login: 'test@login.com' }
 				})
 			))
 		);
 
 		tokenService.init();
-		tokenService.signIn(signInData.email, signInData.password);
+		tokenService.signIn(signInData.login, signInData.password);
 
 		expect(localStorage.getItem('accessToken')).toEqual(accessToken);
 		expect(localStorage.getItem('client')).toEqual(client);
